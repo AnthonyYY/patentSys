@@ -1,0 +1,72 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+input,
+ul,
+time,
+dd,
+dl,
+dt {
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft YaHei UI Light', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+ul,
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 900;
+}
+button:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.9;
+}
+.btn-default {
+  width: 90px;
+  height: 30px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 600;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+input {
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+}
+.main-view {
+  background-color: #f5f5f5;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,49 @@
+<section class="clearfix">
+
+    <dl class="citation clearfix">
+
+        <dd class="title">同族信息</dd>
+
+        <dt>简单同族:</dt>
+        <dd ng-bind="currentPatent.simpleFamily"></dd>
+
+        <dt>简单同族数:</dt>
+        <dd ng-bind="currentPatent.simpleFamilyCount"></dd>
+
+        <dt>同族国家:</dt>
+        <dd ng-bind="currentPatent.familyCountry"></dd>
+
+    </dl>
+
+    <dl class="citation">
+
+        <dd class="title">引征信息</dd>
+
+        <dt>引证专利:</dt>
+        <dd ng-bind="currentPatent.citePatent"></dd>
+
+        <dt>被引证专利:</dt>
+        <dd ng-bind="currentPatent.citedPatent"></dd>
+
+        <dt>对比专利:</dt>
+        <dd ng-bind="currentPatent.comparePatent"></dd>
+
+        <dt>相似专利:</dt>
+        <dd ng-bind="currentPatent.likePatent"></dd>
+
+        <dt>家族引证专利:</dt>
+        <dd ng-bind="currentPatent.familyCitePatent"></dd>
+
+        <dt>家族被引证专利:</dt>
+        <dd ng-bind="currentPatent.familyCitedPatent"></dd>
+
+        <dt>被引证次数:</dt>
+        <dd ng-bind="currentPatent.citedCount"></dd>
+
+        <dt>族被引证次数:</dt>
+        <dd ng-bind="currentPatent.familyCitedCount"></dd>
+
+
+    </dl>
+
+</section>

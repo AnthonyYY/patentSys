@@ -1,0 +1,57 @@
+<table>
+    <tbody>
+        <tr>
+            <td rowspan="4" class="title">应用前景</td>
+            <td>用途</td>
+            <td ng-bind="currentPatent.usage"></td>
+        </tr>
+        <tr>
+            <td>优势</td>
+            <td ng-bind="currentPatent.advantage"></td>
+        </tr>
+        <tr>
+            <td>创新</td>
+            <td ng-bind="currentPatent.creativePart"></td>
+        </tr>
+        <tr>
+            <td>价值度</td>
+            <td ng-bind="currentPatent.value"></td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    <tr>
+        <td rowspan="4" class="title">转让信息</td>
+    </tr>
+    <tr>
+        <td>转让人</td>
+        <td>受让人</td>
+        <td>转让执行日</td>
+    </tr>
+    <tr>
+        <td rowspan="3" ng-bind="currentPatent.assignor"></td>
+        <td rowspan="3" ng-bind="currentPatent.assignee"></td>
+        <td rowspan="3" ng-bind="currentPatent.assignDate | date:'yyyy/MM/dd'"></td>
+    </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    <tr>
+        <td rowspan="4" class="title">许可信息</td>
+    </tr>
+    <tr>
+        <td>许可人</td>
+        <td>被许可人</td>
+        <td>许可执行日</td>
+    </tr>
+    <tr>
+        <td rowspan="3" ng-bind="currentPatent.licensor"></td>
+        <td rowspan="3" ng-bind="currentPatent.licensee"></td>
+        <td rowspan="3" ng-bind="currentPatent.licensedDate | date:'yyyy/MM/dd'"></td>
+    </tr>
+    </tbody>
+</table>

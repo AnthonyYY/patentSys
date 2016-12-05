@@ -1,0 +1,267 @@
+<header class="home">
+
+    <input type="file" accept=".xlsx,.xml" id="import-excel" style="display: none" onchange="angular.element(this).scope().readExcel(this.value)" ng-model="file">
+
+    <div>
+        <p><img src="../img/logo_white.png" alt="logo"></p>
+        <h1>专利监测预警系统</h1>
+
+        <p class="user">
+            <button ng-click="showUserSetting = !showUserSetting">
+                <span ng-bind="currentUserName"></span>
+                <i></i>
+            </button>
+            <span class="tooltip" ng-show="showUserSetting">
+                <a ng-show="currentUserName== 'admin'"><span ng-click="showUserSetting = false">获取账号</span></a>
+                <a ng-show="currentUserName== 'admin'" open-file-dialog="import-excel">
+                    <span>导入excel</span>
+                </a>
+                <a href="#"><span ng-click="showUserSetting = false">修改密码</span></a>
+                <a ui-sref="login"><span ng-click="showUserSetting = false"><img src="../img/logout.png" alt="">退出</span></a>
+            </span>
+        </p>
+
+        <p class="filter" ng-click="showSearchFilter = !showSearchFilter">
+            <span>搜索组合</span>
+        </p>
+
+        <p class="search">
+            <label for="searchKey"></label>
+                <input type="text" id="searchKey" name="searchKey" placeholder="搜索" ng-model="searchKey" patent-search-bar>
+        </p>
+
+        <p class="hot">
+            热门搜索: 汽车 火箭 轮船
+        </p>
+    </div>
+</header>
+
+<main class="home">
+    <aside class="nav-bar">
+        <div class="nav">
+            <p class="title">专利专题</p>
+            <section first-class-menu>
+                <div ng-repeat="menu in firstClassMenus">
+                    <h4 class="sub-title">
+                        <div>
+                            <span ng-bind="menu" data-top-menu="{{menu}}" get-patent-by-class-one></span>
+                            <span nav></span>
+                        </div>
+                    </h4>
+                    <ul second-class-menu data-parent-menu="{{menu}}">
+                        <li ng-repeat="subMenu in secondClassMenus">
+                            <span ng-bind="subMenu" get-patent-by-class-two data-top-menu="{{menu}}" data-parent-menu="{{subMenu}}"></span>
+                            <div class="sub-nav" third-class-menu data-parent-menu="{{subMenu}}" data-top-menu="{{menu}}">
+                                <button
+                                        type="button"
+                                        class="item"
+                                        ng-repeat="childMenu in thirdClassMenus"
+                                        ng-bind="childMenu"
+                                        data-top-menu="{{menu}}"
+                                        data-parent-menu="{{subMenu}}"
+                                        data-child-menu="{{childMenu}}"
+                                        get-patent-by-class-three
+                                    ></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="nav condition">
+            <p class="title">
+                筛选条件
+            </p>
+            <section>
+                <ul>
+                    <li>条件A</li>
+                    <li>条件A</li>
+                    <li>条件A</li>
+                </ul>
+            </section>
+        </div>
+
+    </aside>
+
+    <article>
+        <header class="navigation">
+            <p>
+                <a
+                    ng-if="navTitle.classOne"
+                    href="javascript:void(0)"
+                    get-patent-by-class-one
+                    data-top-menu="{{navTitle.classOne}}">
+                    <span ng-bind="navTitle.classOne"></span></a>
+                <a
+                    ng-if="navTitle.classTwo"
+                    href="javascript:void(0)"
+                    get-patent-by-class-two
+                    data-top-menu="{{navTitle.classOne}}"
+                    data-parent-menu="{{navTitle.classTwo}}">
+                    &gt;<span ng-bind="navTitle.classTwo"></span></a>
+                <a
+                    ng-if="navTitle.classThree"
+                    data-top-menu="{{navTitle.classOne}}"
+                    data-parent-menu="{{navTitle.classTwo}}"
+                    data-child-menu="{{navTitle.classThree}}"
+                    get-patent-by-class-three
+                    href="javascript:void(0)">
+                    &gt;<span ng-bind="navTitle.classThree"></span></a>
+                <a
+                    class="ellipsis"
+                    ng-if="navTitle.classFour"
+                    href="javascript:void(0)">
+                    &gt;<span ng-bind="navTitle.classFour"></span></a>
+            </p>
+            <p ng-if="!navTitle.classFour">
+                <button class="clear">清空筛选</button>
+                <button class="save">保存</button>
+            </p>
+
+            <p class="prev-next-page" ng-if="navTitle.classFour">
+                <button type="button">上一页</button>
+                <button type="button">下一页</button>
+            </p>
+        </header>
+
+        <section class="body" ui-view></section>
+
+    </article>
+
+    <aside class="news">
+        <div class="block">
+            <p class="block-title">最新专利</p>
+            <div class="block-content">
+                <div class="patent" ng-repeat="patent in newestPatents">
+                    <a ui-sref="home.patent-detail" ng-click="setCurrentPatent(null,patent.titleTranslated,patent)" class="patent-name" ng-bind="patent.titleTranslated"></a>
+                    <p><small>公开号 : </small><b ng-bind="patent.publicId"></b></p>
+                    <p><small>公开日 : </small><b ng-bind="patent.publicDate | date: 'yyyy-MM-dd'"></b></p>
+                </div>
+
+                <!--<div class="block-ending">
+                    <button disabled class="prev"></button>
+                    <em class="current"></em>
+                    <em></em>
+                    <em></em>
+                    <button class="next"></button>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="block">
+            <p class="block-title">核心专利</p>
+            <div class="block-content">
+
+                <div class="patent" ng-repeat="patent in popularPatents">
+                    <a ui-sref="home.patent-detail" ng-click="setCurrentPatent(null,patent.titleTranslated,patent)" class="patent-name" ng-bind="patent.titleTranslated"></a>
+                    <p><small>公开号 : </small><b ng-bind="patent.publicId"></b></p>
+                    <p><small>公开日 : </small><b ng-bind="patent.publicDate | date: 'yyyy-MM-dd'"></b></p>
+                </div>
+
+                <!--<div class="block-ending">
+                    <button disabled class="prev"></button>
+                    <em class="current"></em>
+                    <em></em>
+                    <em></em>
+                    <button class="next"></button>
+                </div>-->
+            </div>
+        </div>
+    </aside>
+</main>
+
+<div class="mask" ng-show="showSearchFilter">
+    <div class="search-filter">
+        <form>
+            <section class="items">
+                <p class="item">
+                    <label for="patent-title">标题</label>
+                    <input type="text" id="patent-title" name="patent-title">
+                </p>
+
+                <p class="item">
+                    <label for="patent-summary">摘要</label>
+                    <input type="text" id="patent-summary" name="patent-summary">
+                </p>
+
+                <p class="item">
+                    <label for="patent-ipc">IPC</label>
+                    <input type="text" id="patent-ipc" name="patent-ipc">
+                </p>
+
+                <p class="item">
+                    <label for="patent-disclosure-num">公开号</label>
+                    <input type="text" id="patent-disclosure-num" name="patent-disclosure-num">
+                </p>
+
+                <p class="item">
+                    <label for="patent-disclosure-date">公开日</label>
+                    <input type="text" id="patent-disclosure-date" name="patent-disclosure-date">
+                </p>
+
+                <p class="item">
+                    <label for="patent-nav-item">导航项</label>
+                    <input type="text" id="patent-nav-item" name="patent-nav-item">
+                </p>
+
+                <p class="item">
+                    <label for="patent-application-num">申请号</label>
+                    <input type="text" id="patent-application-num" name="patent-application-num">
+                </p>
+
+                <p class="item">
+                    <label for="patent-application-date">申请日</label>
+                    <input type="text" id="patent-application-date" name="patent-application-date">
+                </p>
+
+                <p class="item">
+                    <label for="patent-proposer">申请人</label>
+                    <input type="text" id="patent-proposer" name="patent-proposer">
+                </p>
+
+                <p class="item">
+                    <label for="patent-inventor">申请人</label>
+                    <input type="text" id="patent-inventor" name="patent-inventor">
+                </p>
+
+                <p class="item">
+                    <label for="patent-assignment">转让</label>
+                    <input type="text" id="patent-assignment" name="patent-assignment">
+                </p>
+
+                <p class="item">
+                    <label for="patent-permission">许可</label>
+                    <input type="text" id="patent-permission" name="patent-permission">
+                </p>
+
+                <p class="item">
+                    <label for="patent-lawsuit">诉讼</label>
+                    <input type="text" id="patent-lawsuit" name="patent-lawsuit">
+                </p>
+
+                <p class="item">
+                    <label for="patent-classification">分类</label>
+                    <input type="text" id="patent-classification" name="patent-classification">
+                </p>
+
+                <p class="item">
+                    <label for="patent-innovation-point">创新点</label>
+                    <input type="text" id="patent-innovation-point" name="patent-innovation-point">
+                </p>
+
+                <p class="item">
+                    <label for="patent-quote">引用</label>
+                    <input type="text" id="patent-quote" name="patent-quote">
+                </p>
+            </section>
+
+            <section class="search-btn-group">
+                <p>
+                    <button class="btn-default" type="button" ng-click="showSearchFilter = false">检索</button>
+                    <button class="btn-default" type="button">重置</button>
+                </p>
+            </section>
+        </form>
+    </div>
+</div>

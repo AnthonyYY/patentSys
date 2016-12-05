@@ -1,0 +1,1 @@
+angular.module('patentApp',['ui.router','highcharts-ng','ui.bootstrap']);

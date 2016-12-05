@@ -1,0 +1,75 @@
+<dl class="basic-info">
+
+    <dt>标题: </dt>
+    <dd ng-bind="currentPatent.title || '&nbsp;'"></dd>
+
+    <dt>标题改写: </dt>
+    <dd ng-bind="currentPatent.titleModified || '&nbsp;'"></dd>
+
+    <dt>标题翻译: </dt>
+    <dd ng-bind="currentPatent.titleTranslated || '&nbsp;'"></dd>
+
+    <dt>申请号:</dt>
+    <dd ng-bind="currentPatent.applicationId || '&nbsp;'"></dd>
+
+    <dt>申请日:</dt>
+    <dd ng-bind="(currentPatent.applicationDate | date: 'yyyy-MM-dd') || '&nbsp;'"></dd>
+
+    <dt>公开号:</dt>
+    <dd ng-bind="currentPatent.publicId || '&nbsp;'"></dd>
+
+    <dt>公开日:</dt>
+    <dd ng-bind="(currentPatent.publicDate | date: 'yyyy-MM-dd') || '&nbsp;'"></dd>
+
+    <dt>优先权号:</dt>
+    <dd ng-bind="currentPatent.priorityNum || '&nbsp;'"></dd>
+
+    <dt>优先权日:</dt>
+    <dd ng-bind="(currentPatent.priorityDate | date: 'yyyy-MM-dd' ) || '&nbsp;'"></dd>
+
+    <dt>申请人:</dt>
+    <dd ng-bind="currentPatent.proposer || '&nbsp;'"></dd>
+
+    <dt>申请人(改写):</dt>
+    <dd ng-bind="currentPatent.proposerModified || '&nbsp;'"></dd>
+
+    <dt>申请人地址:</dt>
+    <dd ng-bind="currentPatent.proposerAddress || '&nbsp;'"></dd>
+
+    <dt>发明人:</dt>
+    <dd ng-bind="currentPatent.inventor || '&nbsp;'"></dd>
+
+    <dt>IPC 主分类:</dt>
+    <dd ng-bind="currentPatent.IPCMainType || '&nbsp;'"></dd>
+
+    <dt>IPC 分类:</dt>
+    <dd ng-bind="currentPatent.IPCtype || '&nbsp;'"></dd>
+
+    <dt>代理人:</dt>
+    <dd ng-bind="currentPatent.agent || '&nbsp;'"></dd>
+
+    <dt>代理机构:</dt>
+    <dd ng-bind="currentPatent.agency || '&nbsp;'"></dd>
+
+    <dt>标签:</dt>
+    <dd ng-bind="currentPatent.tag || '&nbsp;'"></dd>
+</dl>
+
+<div>
+
+    <p>
+        <small>摘要:</small>
+        <span ng-bind="currentPatent.summary"></span>
+    </p>
+
+    <p>
+        <small>摘要(翻译):</small>
+        <span ng-bind="currentPatent.summaryTranslated"></span>
+    </p>
+
+    <p>
+        <small>摘要(改写):</small>
+        <span ng-bind="currentPatent.summaryModified"></span>
+    </p>
+
+</div>

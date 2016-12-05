@@ -1,0 +1,40 @@
+
+<table>
+    <thead>
+    <tr>
+        <th class="num"><label for="all">序号</label> <input type="checkbox" id="all"></th>
+        <th>标题</th>
+        <th>申请人</th>
+        <th>公开日</th>
+        <th>申请日</th>
+        <th>标签</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="patent in patents">
+        <td class="num"><label ng-bind="(10*curPage)+$index+1"></label> <input type="checkbox"></td>
+        <td><a ui-sref="home.patent-detail" ng-bind="patent.titleTranslated" ng-click="setCurrentPatent($index,patent.titleTranslated)"></a></td>
+        <td class="proposer" ng-bind="patent.proposer"></td>
+        <td ng-bind="patent.publicDate | date: 'yyyy/MM/dd'"></td>
+        <td ng-bind="patent.applicationDate | date: 'yyyy/MM/dd'"></td>
+        <td class="patent-tag" ng-bind="patent.tag"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+<ul
+        ng-show="count > 10"
+        class="pagination"
+        uib-pagination
+        total-items="count"
+        items-per-page="10"
+        ng-model="curPage"
+        ng-change="getPatents(curPage,10)"
+        force-ellipses="true"
+        max-size="10"
+        previous-text="&lt; 上一页"
+        next-text="下一页 &gt;"
+
+></ul>

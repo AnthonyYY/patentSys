@@ -1,0 +1,122 @@
+header.login{
+  border-top: 1px solid #f1f1f1;
+  background-color: #fff;
+  position: relative;
+  div{
+    width: 90%;
+    max-width: 1024px;
+    height: 72px;
+    margin:auto;
+    h1{
+      float: left;
+      font-size: 24px;
+      color: #333;
+      font-weight: bolder;
+      line-height: 72px;
+      letter-spacing: 2px;
+    }
+    p{
+      float: left;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      img{
+        margin-right: 5px;
+      }
+    }
+
+    button{
+      float: right;
+      margin-top: 21px;
+      border: none;
+      background-color: #379EFF;
+      color: #fff;
+      font-size: 14px;
+      width: 90px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+article.login{
+  height: e("calc(100% - 162px)");
+  background: #f1f1f1 url('../img/banner.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+  .login-main{
+    width: 90%;
+    max-width: 1024px;
+    margin: auto;
+    padding-top: 50px;
+    .login-panel{
+      box-sizing: border-box;
+      float: right;
+      width: 360px;
+      height: 400px;
+      background-color: rgba(0,0,0,0.6);
+      border-radius: 4px;
+      padding: 20px 30px;
+      h2{
+        color: #fff;
+        font-size: 30px;
+        letter-spacing: 10px;
+      }
+      div{
+        margin-top: 30px;
+        label{
+          position: absolute;
+          width: 40px;
+          height: 40px;
+        }
+        label.icon-user{
+          background: transparent url('../img/contacts.png') no-repeat center;
+        }
+        label.icon-lock{
+          background: transparent url('../img/lock.png') no-repeat center;
+        }
+        input{
+          box-sizing: border-box;
+          padding-left: 40px;
+          border-radius:4px;
+          border: none;
+          width: 300px;
+          height: 40px;
+          background-color: #fff;
+        }
+        button{
+          margin-top: 50px;
+          background-color: #379EFF;
+          width: 300px;
+          height: 40px;
+          border: none;
+          border-radius: 4px;
+          font-weight:bolder;
+          font-size: 16px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+footer.login{
+  height: 90px;
+  color: #555555;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}

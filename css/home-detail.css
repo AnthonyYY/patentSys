@@ -1,0 +1,190 @@
+.panel {
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+.patent-details {
+  padding: 0 30px;
+  position: relative;
+}
+.patent-details .patent-details-header {
+  height: 40px;
+  padding-top: 10px;
+}
+.patent-details .patent-details-header::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #DDDDDD;
+  top: 50px;
+}
+.patent-details .patent-details-header span {
+  font-weight: 600;
+  float: left;
+  display: inline-block;
+  width: 12.5%;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  color: #888888;
+  text-align: center;
+  cursor: pointer;
+}
+.patent-details .patent-details-header span.active {
+  border-bottom: 4px solid #379EFF;
+  background-color: #FAFAFA;
+  color: #333333;
+}
+.patent-details .content {
+  padding: 20px 0;
+}
+.patent-details .content div {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.patent-details .content div p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.patent-details .content div p > small {
+  font-size: 14px;
+  color: #888888;
+  font-weight: 400;
+}
+.patent-details .content div p > span {
+  text-indent: 1em;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 600;
+}
+.patent-details .content dl.basic-info {
+  display: inline-block;
+  background-color: #F9F9F9;
+  width: calc(55% - 4px);
+  font-size: 0;
+}
+.patent-details .content dl.basic-info:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.patent-details .content dl.basic-info dt,
+.patent-details .content dl.basic-info dd {
+  font-size: 14px;
+  padding: 3px 5px;
+}
+.patent-details .content dl.basic-info dt {
+  display: inline-block;
+  float: left;
+  width: 20%;
+  color: #888888;
+  text-align: right;
+}
+.patent-details .content dl.basic-info dt:first-of-type {
+  padding-top: 15px;
+}
+.patent-details .content dl.basic-info dt:last-of-type {
+  padding-bottom: 15px;
+}
+.patent-details .content dl.basic-info dd {
+  float: left;
+  border-left: 4px solid #ffffff;
+  width: 70%;
+  font-weight: 900;
+  color: #333333;
+  text-align: justify;
+}
+.patent-details .content dl.basic-info dd:first-of-type {
+  padding-top: 15px;
+}
+.patent-details .content dl.basic-info dd:last-of-type {
+  padding-bottom: 15px;
+}
+.patent-details .content dl.classify {
+  position: relative;
+  font-size: 0;
+}
+.patent-details .content dl.classify dt,
+.patent-details .content dl.classify dd {
+  font-size: 14px;
+  background-color: #f9f9f9;
+  height: 38px;
+  border-bottom: 4px solid #ffffff;
+  float: left;
+  padding-left: 24px;
+  line-height: 34px;
+  box-sizing: border-box;
+}
+.patent-details .content dl.classify dt {
+  border-right: 4px solid #ffffff;
+  color: #888888;
+  font-weight: 100;
+  width: calc(29% - 4px);
+}
+.patent-details .content dl.classify dd {
+  font-weight: 900;
+  width: 71%;
+  color: #333333;
+}
+.patent-details .content dl.citation {
+  width: calc(50% - 10px);
+  float: left;
+  font-size: 0;
+  position: relative;
+}
+.patent-details .content dl.citation:first-of-type {
+  margin-right: 20px;
+}
+.patent-details .content dl.citation dt,
+.patent-details .content dl.citation dd {
+  float: left;
+  font-size: 14px;
+  border-bottom: 4px solid #ffffff;
+  background-color: #f9f9f9;
+  height: 40px;
+  padding-left: 20px;
+  line-height: 40px;
+  box-sizing: border-box;
+}
+.patent-details .content dl.citation dt {
+  width: 45%;
+  border-right: 4px solid #ffffff;
+  color: #999;
+}
+.patent-details .content dl.citation dd {
+  width: 55%;
+  color: #333333;
+  font-weight: 900;
+}
+.patent-details .content dl.citation dd.title {
+  width: 100%;
+  padding-left: 0;
+  border-right: none;
+  text-align: center;
+}
+.patent-details .content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.patent-details .content table tbody {
+  background-color: #F3F3F4;
+}
+.patent-details .content table tbody tr td {
+  padding-left: 20px;
+  font-size: 12px;
+  color: #888888;
+  height: 40px;
+  border-bottom: 4px solid #ffffff;
+}
+.patent-details .content table tbody tr td.title {
+  padding-left: 0;
+  color: #333333;
+  font-weight: 900;
+  width: 160px;
+  font-size: 14px;
+  text-align: center;
+  border-right: 4px solid #ffffff;
+}

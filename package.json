@@ -1,0 +1,33 @@
+{
+  "name": "parent-search-system",
+  "version": "1.0.0",
+  "description": "a patent search system",
+  "main": "index.html",
+  "window": {
+    "width": 1080,
+    "height": 640,
+    "min_width": 1080,
+    "min_height": 625,
+    "position": "center",
+    "icon": "img/logo.png"
+  },
+  "scripts": {
+    "test": "none"
+  },
+  "keywords": [
+    "parent",
+    "nw.js"
+  ],
+  "author": "AnthonyYY",
+  "license": "ISC",
+  "dependencies": {
+    "level-js": "^2.2.4",
+    "linvodb3": "^3.25.0",
+    "md5": "^2.2.1",
+    "node-xlsx": "^0.7.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0"
+  }
+}

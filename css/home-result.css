@@ -1,0 +1,264 @@
+.panel {
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+.filter-condition.panel {
+  padding: 16px 20px;
+  border: 2px solid #AFD8FF;
+}
+.filter-condition.panel p {
+  height: 22px;
+  margin: 8px 0;
+  line-height: 22px;
+  white-space: nowrap;
+}
+.filter-condition.panel p:nth-child(-2) {
+  margin-right: 0;
+}
+.filter-condition.panel p small {
+  width: 90px;
+  display: inline-block;
+  font-size: 12px;
+  color: #888888;
+  float: left;
+  font-weight: 600;
+}
+.filter-condition.panel p span.item {
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  color: #087CCA;
+  margin-right: 25px;
+}
+.filter-condition.panel p span.item b {
+  color: #333;
+}
+.filter-condition.panel p span.edit {
+  float: right;
+}
+.filter-condition.panel p span.edit .btn {
+  width: 44px;
+  height: 22px;
+  border-radius: 3px;
+}
+.filter-condition.panel p span.edit input {
+  border: 1px solid #BBBBBB;
+  background-color: #fff;
+  text-align: center;
+}
+.filter-condition.panel p span.edit button {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.filter-condition.panel p span.edit .btn-save {
+  color: #fff;
+  background-color: #379EFF;
+}
+.filter-condition.panel p span.edit .btn-default {
+  color: #379EFF;
+  border: 1px solid #379EFF;
+  background-color: #fff;
+}
+.patent-detail.panel {
+  padding: 10px;
+}
+.patent-detail.panel header {
+  height: 39px;
+  line-height: 39px;
+  border-bottom: 1px solid #DCDCDC;
+}
+.patent-detail.panel header .tab {
+  float: left;
+  height: 40px;
+  width: 80px;
+  background-color: #f5f5f5;
+  border: 1px solid #DCDCDC;
+  color: #888888;
+  user-select: none;
+  transition: background-color 0.4s linear;
+}
+.patent-detail.panel header .tab.active {
+  background-color: #fff;
+  color: #087CCA;
+  font-size: 13px;
+  border-bottom: none;
+}
+.patent-detail.panel header .tab:first-of-type {
+  border-right: none;
+  border-top-left-radius: 3px;
+}
+.patent-detail.panel header .tab:last-of-type {
+  border-top-right-radius: 3px;
+}
+.patent-detail.panel header small {
+  font-size: 12px;
+  color: #888888;
+  margin-left: 36px;
+}
+.patent-detail.panel header strong {
+  color: #F17830;
+  font-size: 16px;
+  font-weight: 900;
+}
+.patent-detail.panel header button.operation {
+  width: 80px;
+  height: 28px;
+  color: #888888;
+  border: 1px solid #888888;
+  float: right;
+  line-height: 26px;
+  background-color: transparent;
+  border-radius: 3px;
+}
+.patent-detail.panel header button.operation {
+  font-size: 14px;
+  margin-left: 20px;
+}
+.patent-detail.panel header button.operation i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.patent-detail.panel header button.operation i.order {
+  background: transparent url('../img/down.png') no-repeat center;
+  margin-left: 2px;
+}
+.patent-detail.panel header button.operation i.export {
+  margin-right: 2px;
+  background: transparent url('../img/export.png') no-repeat center;
+}
+.patent-detail.panel .main table {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.patent-detail.panel .main table .num {
+  text-align: center;
+}
+.patent-detail.panel .main table thead tr {
+  height: 30px;
+  background-color: #F5F5F5;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.patent-detail.panel .main table thead tr th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+}
+.patent-detail.panel .main table thead tr th input {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.patent-detail.panel .main table tbody tr {
+  height: 40px;
+}
+.patent-detail.panel .main table tbody tr td.num {
+  min-width: 3em;
+  padding: 0 20px;
+  text-align: right;
+}
+.patent-detail.panel .main table tbody tr td.patent-tag {
+  min-width: 3em;
+}
+.patent-detail.panel .main table tbody tr td {
+  font-size: 13px;
+}
+.patent-detail.panel .main table tbody tr td input {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.patent-detail.panel .main table tbody tr td.proposer {
+  max-width: 20em;
+}
+.patent-detail.panel .main table tbody tr td:last-of-type {
+  max-width: 2em;
+}
+.patent-detail.panel .main table tbody tr:nth-of-type(even) {
+  background-color: #F5F5F5;
+}
+.patent-detail.panel .main .charts {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 0 0 0;
+}
+.patent-detail.panel .main .charts .chart {
+  position: relative;
+  width: calc(50% - 5px);
+  height: 240px;
+  background-color: #FAFAFA;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.patent-detail.panel .main .charts .chart .chart-title {
+  height: 39px;
+  line-height: 39px;
+  padding-left: 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+.patent-detail.panel .main .charts .chart .chart-title span {
+  display: inline-block;
+  padding-left: 4px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 900;
+  border-left: 8px solid #379EFF;
+}
+.patent-detail.panel .main .charts .chart:nth-of-type(odd) {
+  float: left;
+}
+.patent-detail.panel .main .charts .chart:nth-of-type(even) {
+  float: right;
+}
+.pagination {
+  text-align: center;
+  padding-top: 30px;
+  cursor: pointer;
+  font-size: 0;
+}
+.pagination li {
+  display: inline-block;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 30px;
+  min-width: 30px;
+  line-height: 30px;
+  padding: 0 3px;
+  transition: background-color, 0.2s ease;
+}
+.pagination li a {
+  font-size: 12px;
+  color: #9d9d9d;
+  padding: 10px;
+}
+.pagination li a:focus {
+  outline: none;
+}
+.pagination li:hover {
+  background-color: #d5d5d5;
+}
+.pagination li:hover a {
+  color: #5bc0de;
+  font-weight: 600;
+}
+.pagination li.active {
+  background-color: #337ab7;
+}
+.pagination li.active a {
+  color: #ffffff;
+}
+.pagination li:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination li:last-of-type {
+  border-right: 1px solid #cccccc;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}

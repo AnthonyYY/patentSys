@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="patentApp">
+<head>
+	<meta charset="UTF-8">
+	<title>专利监测预警系统</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/home-result.css">
+	<link rel="stylesheet" href="css/home-detail.css">
+	<!--<link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">-->
+	<link rel="stylesheet" href="vendors/angular-bootstrap/ui-bootstrap-csp.css">
+	<link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+	<script type="text/javascript" src="vendors/angular/angular.js"></script>
+	<script type="text/javascript" src="vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="vendors/angular-cookie/angular-cookie.min.js"></script>
+	<script type="text/javascript" src="vendors/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="vendors/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script type="text/javascript" src="vendors/highcharts/highcharts.src.js"></script>
+	<script type="text/javascript" src="vendors/highcharts-ng/dist/lazyload.js"></script>
+	<script type="text/javascript" src="vendors/highcharts-ng/dist/highcharts-ng.js"></script>
+</head>
+<body>
+	<div ui-view class="main-view"></div>
+</body>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/common/fileDialogDv.js"></script>
+<script type="text/javascript" src="js/common/notifySv.js"></script>
+<script type="text/javascript" src="js/login/loginCtrl.js"></script>
+<script type="text/javascript" src="js/login/passwordSv.js"></script>
+<script type="text/javascript" src="js/login/userPool.js"></script>
+<script type="text/javascript" src="js/home/homeCtrl.js"></script>
+<script type="text/javascript" src="js/home/chartCtrl.js"></script>
+<script type="text/javascript" src="js/home/navBarDv.js"></script>
+<script type="text/javascript" src="js/home/patentSv.js"></script>
+<script type="text/javascript" src="js/home/header/excel-service.js"></script>
+<script type="text/javascript" src="js/home/header/patentSearchDv.js"></script>
+<script type="text/javascript" src="js/home/sidebar/firstClassMenuDv.js"></script>
+<script type="text/javascript" src="js/home/sidebar/secondClassMenuDv.js"></script>
+<script type="text/javascript" src="js/home/sidebar/thirdClassMenuDv.js"></script>
+<script type="text/javascript" src="js/home/sidebar/getPatentByClassDv.js"></script>
+<script type="text/javascript" src="js/home/content/contentCtrl.js"></script>
+<script type="text/javascript">
+
+	var fs = require('fs');
+	fs.watch('./js',function () {
+		window.location.reload();
+	});
+	var gui = require('nw.gui');
+	gui.Window.get().showDevTools();
+</script>
+</html>

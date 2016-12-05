@@ -1,0 +1,98 @@
+<div class="filter-condition panel">
+    <p>
+        <small class="title">申请时间：</small>
+
+        <span class="item">2011-2016 <b>(3)</b></span>
+        <span class="item">2011-2016 <b>(3)</b></span>
+        <span class="item">2011-2016 <b>(3)</b></span>
+
+        <span class="edit" >
+            <input class="btn" type="text">
+            -
+            <input class="btn" type="text">
+            <button class="btn btn-save">确定</button>
+        </span>
+    </p>
+
+    <p>
+        <small class="title">公开年：</small>
+
+        <span class="item">2011 <b>(3)</b></span>
+        <span class="item">2011 <b>(3)</b></span>
+        <span class="item">2011 <b>(3)</b></span>
+
+        <span class="edit" >
+            <button class="btn btn-default">取消</button>
+            <button class="btn btn-default">多选</button>
+        </span>
+    </p>
+
+    <p>
+        <small class="title">国家/地区：</small>
+
+        <span class="item">美国 <b>(3)</b></span>
+        <span class="item">美国 <b>(3)</b></span>
+        <span class="item">美国 <b>(3)</b></span>
+        <span class="item">美国 <b>(3)</b></span>
+
+        <span class="edit" >
+            <button class="btn btn-default">多选</button>
+        </span>
+    </p>
+
+    <p>
+        <small class="title">申请人：</small>
+
+        <span class="item">大椎 <b>(3)</b></span>
+        <span class="item">大锤 <b>(3)</b></span>
+        <span class="item">大堆 <b>(3)</b></span>
+
+        <span class="edit" >
+            <button class="btn btn-default">多选</button>
+        </span>
+    </p>
+
+    <p>
+        <small class="title">分类号：</small>
+
+        <span class="item">X19298219 <b>(3)</b></span>
+        <span class="item">X19298219 <b>(3)</b></span>
+        <span class="item">X19298219 <b>(3)</b></span>
+
+        <span class="edit" >
+            <button class="btn btn-default">多选</button>
+        </span>
+    </p>
+
+    <p>
+        <small class="title">主题：</small>
+
+        <span class="item">主题主题 <b>(3)</b></span>
+        <span class="item">X19298219 <b>(3)</b></span>
+        <span class="item">929821主题主题9 <b>(3)</b></span>
+
+        <span class="edit" >
+            <button class="btn btn-default">多选</button>
+        </span>
+    </p>
+</div>
+
+<div class="patent-detail panel">
+    <header>
+        <button class="tab" ui-sref-active="active" ui-sref=".list">列表</button>
+        <button class="tab" ui-sref-active="active" ui-sref=".statistic">统计</button>
+
+        <small>专利数量</small>
+        <strong ng-bind="count"></strong>
+
+        <!--<small>新增数量</small>
+        <strong>23</strong>-->
+
+        <button class="operation"><i style="font-size: 16px;" class="fa fa-trash"></i>删除</button>
+
+        <button class="operation"><i class="export"></i>导出</button>
+
+        <button class="operation">排序<i class="order"></i></button>
+    </header>
+    <div class="main" ui-view></div>
+</div>
